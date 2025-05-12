@@ -14,10 +14,7 @@ class VehicleStore {
     }
 
     assignUserToVehicle(bikeId, userId) {
-        console.log(bikeId);
-        console.log(this.bikeMap.values())
         const bike = this.bikeMap.get(bikeId);
-        console.log("mi allo ",bike)
         if (!bike || bike.count <= 0) return false;
         bike.assignUserId = userId;
         bike.count -= 1;

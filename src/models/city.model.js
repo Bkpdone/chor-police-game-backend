@@ -34,6 +34,7 @@ class CityStore {
         const cities = Array.from(this.cityMap.values());
         cities.forEach(city => city.thiefPresent = false);
         const randomIndex = Math.floor(Math.random() * cities.length);
+        console.log("index: ",randomIndex)
         cities[randomIndex].thiefPresent = true;
         this.cityMap.set(cities[randomIndex].id, cities[randomIndex]);
     }
